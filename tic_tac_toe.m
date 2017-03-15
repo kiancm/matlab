@@ -169,8 +169,9 @@ while true
     if 0 <= x && x <= 140 && 40 <= y && y <= 120
         continue
     elseif 160 <= x && x <= 300 && 40 <= y && y <= 120
+        close
         break
-    end
+    end 
 end
 function y = draw(x,y,player)
     xcolor = [randi(255) randi(255) randi(255)] / 255;
