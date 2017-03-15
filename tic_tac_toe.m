@@ -151,7 +151,7 @@ clear;
 
 function y = draw(x,y,player)
     if player == 0
-        a = x*100:x*100+100;
+        a = x*100+5:x*100+100-5;
         b = a - x * 100 + y * 100;
         h1 = plot(a,b,'r');
         h2 = plot(a,-1 * b + 200 * y + 100,'r');
