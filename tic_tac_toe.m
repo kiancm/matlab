@@ -5,6 +5,7 @@ GE 1502 - 9:15 am
 Tic-Tac-Toe Game
 %}
 figure(1)
+clf;
 axis off;
 hold on;
 axis([0 300 0 300]);
@@ -151,16 +152,16 @@ clear;
 
 function y = draw(x,y,player)
     if player == 0
-        a = x*100+5:x*100+100-5;
+        a = x * 100 + 5:x * 100 + 100 - 5;
         b = a - x * 100 + y * 100;
         h1 = plot(a,b,'r');
-        h2 = plot(a,-1 * b + 200 * y + 100,'r');
+        h2 = plot(a,200 * y + 100 - b,'r');
         set(h1,'linewidth',2);
         set(h2,'linewidth',2);
     else
         a = x * 100 + 50;
         b = y * 100 + 50;
-        th = 0:pi/100:2*pi;
+        th = 0:pi/50:2*pi;
         h = plot(40*cos(th)+a,40*sin(th)+b,'b');
         set(h,'linewidth',2);
     end
