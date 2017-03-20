@@ -4,34 +4,33 @@ Kian Mehrabani & Ana Nicosia
 GE 1502 - 9:15 am
 Tic-Tac-Toe Game
 %}
-figure(1)
-clear
-clf
-hold on
-axis off
-axis([0 300 0 300])
-startbuttoncolor = [randi(255) randi(255) randi(255)] / 255;
-startbuttonbgcolor = [randi(255) randi(255) randi(255)] / 255;
-text(18,180,sprintf([
-          'INSTRUCTIONS:\n'...
-          '1. Press Start to begin.\n'...
-          '2. Player One, click on any box to make an "X".\n'...
-          '3. Player Two, click on any box to make an "O".\n'...
-          '4. Continue until a winner or tie game is decided.\n'...
-          '5. Press the Restart button to play again or Quit to exit.\n']),...
-          'FontSize',12)
-rectangle('Position',[55, 40, 191, 80],'FaceColor',startbuttonbgcolor)
-text(120,81,'Start','FontSize',30,'Color',startbuttoncolor)
-x = 0;
-y = 0;
-while ~(55 <= x && x <= 246 && 40 <= y && y <= 120)
-    [x,y] = ginput(1);
-end
-clear
-clf
-
 while true
+    figure(1)
+    clear
     clf
+    hold on
+    axis off
+    axis([0 300 0 300])
+    startbuttoncolor = [randi(255) randi(255) randi(255)] / 255;
+    startbuttonbgcolor = [randi(255) randi(255) randi(255)] / 255;
+    text(18,180,sprintf([
+              'INSTRUCTIONS:\n'...
+              '1. Press Start to begin.\n'...
+              '2. Player One, click on any box to make an "X".\n'...
+              '3. Player Two, click on any box to make an "O".\n'...
+              '4. Continue until a winner or tie game is decided.\n'...
+              '5. Press the Restart button to play again or Quit to exit.\n']),...
+              'FontSize',12)
+    rectangle('Position',[55, 40, 191, 80],'FaceColor',startbuttonbgcolor)
+    text(120,81,'Start','FontSize',30,'Color',startbuttoncolor)
+    x = 0;
+    y = 0;
+    while ~(55 <= x && x <= 246 && 40 <= y && y <= 120)
+        [x,y] = ginput(1);
+    end
+    clear
+    clf
+    
     axis off
     axis([0 300 0 300])
     hold on
